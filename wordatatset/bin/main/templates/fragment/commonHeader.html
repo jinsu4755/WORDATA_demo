@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<header id="header_two" th:flagment="header">
+    <div class="container_two">
+        <div class="row">
+            <div class="header clearfix">
+                <h1>
+                    <a th:href="@{/}">
+                        <em><img th:src="@{/img/main_title.jpg}" alt="WORDATA"></em>
+                    </a>
+                </h1>
+                <nav class="nav">
+                    <ul class="clearfix">
+                        <li sec:authorize="isAuthenticated()"><a th:href="@{#}">데이터 분석</a></li>
+                        <li sec:authorize="isAuthenticated()"><a th:href="@{#}">나만의 단어장</a></li>
+                        <li sec:authorize="isAnonymous()"><a th:href="@{/joinMembership}">회원가입</a></li>
+                        <li sec:authorize="isAnonymous()"><a th:href="@{/login}">로그인</a></li>
+                        <li sec:authorize="isAuthenticated()"><a th:href="@{.logout_processing}">로그아웃</a> </li>
+                        <li sec:authorize="isAuthenticated()"><a th:href="@{#}"><span sec:authentication="name">username</span>님 반가워요!</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- header -->
+<!--login join header-->
+<div class="login_header" th:flagment="l-header">
+    <div class="container">
+        <div class="row">
+            <div class="login_title">
+                <h1>
+                    <a href="index.html">WORDATA</a>
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header -->
+
+
+</html>

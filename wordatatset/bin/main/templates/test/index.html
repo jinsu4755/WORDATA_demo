@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="www.thymeleaf.org">
+  <head>
+    <!-- metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="wordata">
+    <meta name="description" content="데이터 분석과 인공지능을 활용한 단어장 자동 생성 서비스 워다타입니다.">
+    <meta name="keywords" content="빅데이터, 데이터 분석, 인공지능, 영어, 영어 단어장, 워다타, wordata">
+    <title>WORDATA</title>
+
+    <!-- css -->
+    <link rel="stylesheet" th:href="@{/css/reset.css/}">
+    <link rel="stylesheet" th:href="@{/css/style.css/}">
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu:300,400,700&display=swap&subset=korean" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap&subset=korean" rel="stylesheet">
+
+  </head>
+  <body>
+    <section id="header">
+      <div class="container">
+        <div class="row">
+          <div class="header_up">
+            <div class="main">
+              <div class="main_title">
+                <a href="index.html">
+                  <h1>WORDATA</h1>
+                </a>
+              </div>
+              <nav class="nav">
+                 <div id="nav_content">
+                  <span class="slide">
+                    <a href="#" onclick="openSlideMenu()">
+                      <i class="fas fa-bars"></i>
+                    </a>
+                  </span>
+                  <div id="menu" class="navnav">
+                    <a href="#" class="close" onclick="closeSlideMenu()">
+                      <i class="fas fa-times"></i>
+                    </a>
+                    <a href="login.html" class="menu_info">&#10003; 로그인</a>
+                    <a href="joinMembership.html" class="menu_info">&#10003; 회원가입</a>
+                    <a href="#" class="menu_info">&#10003; 나만의 단어장</a>
+                  </div>
+                </div>
+                <!-- nav_content -->
+               </nav>
+            </div>
+            <!-- //main -->
+          </div>
+          <!-- header_up -->
+        </div>
+      </div>
+      <div class="header_dowm">
+         <div class="title">
+           <h1>빅데이터 분석과 인공지능을 활용한<br>나만의 단어장 자동 생성 서비스</h1>
+         </div>
+         <div class="button">
+           <a href="" class="btn">데이터 분석하기</a>
+         </div>
+      </div>
+      <!-- header_dowm -->
+    </section>
+    <!-- header -->
+
+    <section id="service">
+        <div class="container">
+          <div class="row">
+            <div class="cont_title">
+              <h1>워다타(WORDATA) 서비스 소개</h1>
+              <p>외국어 정보 학습자를 위한 국내최초 문서 텍스트 데이터 마이닝과<br>인공지능(RNN) 모델을 활용한 단어장 자동 생성 웹 서비스 플랫폼</p>
+            </div>
+            <div class="service_cont">
+              <div class="service_chart">
+                <div class="chart_cont">
+                    <div class="cont_info" style="margin-right: 100px;">
+                      <div class="poster">
+                          <figure>
+                              <img src="img/service01.png" srcset="" alt="데이터입력 및 전처리">
+                          </figure>
+                      </div>
+                      <div class="infor">
+                          <h3><strong>&#9995; <span class="highright"><span>데이터입력 및 전처리</span></span></strong></h3>
+                          <p>사용자가 데이터를 입력하고 분석 전에<br>전처리 과정을 진행합니다.</p>
+                      </div>
+                    </div>
+                    <div class="cont_info" style="margin-right: 100px;">
+                      <div class="poster">
+                          <figure>
+                              <img src="img/service02.png" srcset="" alt="단어장 내용 생성">
+                          </figure>
+                      </div>
+                      <div class="infor">
+                          <h3><strong>&#9995; <span class="highright"><span>단어장 내용 생성</span></span></strong></h3>
+                          <p>인공지능(RNN) 모델과 사전 API를<br>이용해 내용을 생성합니다.</p>
+                      </div>
+                    </div>
+                    <div class="cont_info" style="margin-right: 0px;">
+                      <div class="poster">
+                          <figure>
+                              <img src="img/service03.png" srcset="" alt="단어장 출력">
+                          </figure>
+                      </div>
+                      <div class="infor">
+                          <h3><strong>&#9995; <span class="highright"><span>단어장 출력</span></span></strong></h3>
+                          <p>단어장 형식으로 출력되어 사용자는<br>PC를 통해 확인할 수 있습니다.</p>
+                      </div>
+                    </div>
+                </div>
+                <!-- chart_cont-->
+              </div>
+            </div>
+            <!-- service_cont -->
+          </div>
+        </div>
+    </section>
+    <!-- service -->
+
+    <section id="achievement">
+      <div class="container cont_info">
+        <div class="row">
+          <div class="wd_title">
+            <h1>워다타의 역사와 비전</h1>
+          </div>
+          <div>
+            <div class="achievement_info">
+              <div class="word">
+                <h2>Q. WORDATA의 뜻은?</h2>
+                <p>A. <span class="highright"><span>단어(WORD)와 데이터(DATA)</span></span>를 붙여 만든 합성어.</p>
+              </div>
+              <div class="history">
+                <p>2019.09 ~ 2019.10.20 - 프로토타입 개발</p>
+                <p>2020.01.08 ~ 현재 - <span class="highright"><span>워다타 2.0버전 개발중</span></span></p>
+              </div>
+              <div class="award">
+                <p>&#9989; 제 10회 <span class="highright"><span>IT</span></span>&amp;미디어컨텐츠 <span class="highright"><span>경진대회 은상, 인기상</span></span></p>
+                <p>&#9989; 2019 서울시 구로구 <span class="highright"><span>창업경진대회 최우수상</span></span></p>
+              </div>
+            </div>
+            <div class="vision">
+              <p>세상의 기술격차를 해소하고,<br>모두가 각 분야의 전문가가 될 수 있게
+              <br><span class="highright"><span>가장 가까운 곳에 있는 빅데이터 전문가</span></span>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- achievement -->
+
+    <section id="analysis">
+      <div class="container">
+        <div class="row">
+          <div class="cont_title">
+            <h1>단어장 생성 모습</h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- analysis -->
+
+    <section id="developer">
+        <div class="container">
+          <div class="row">
+            <div class="cont_title">
+              <h1>개발자 소개</h1>
+            </div>
+            <div class="dev_cont">
+              <div class="devloper">
+                <div class="dev_img edge">
+                  <img src="img/dev01.jpg" alt="개발자 박결">
+                  <span class="text">AI, Data<br>Analysis</span>
+                </div>
+                <div class="dev_intro">
+                  <h1>박결</h1>
+                  <div class="own">
+                    <ul>
+                      <li>&#10003; IT융합자율학부 18학번</li>
+                      <li>&#10003; 주전공: 소프트웨어공학과 &amp; 부전공: </li>
+                      <li>&#10003; 멋쟁이 사자처럼 6기 부원</li>
+                      <li>&#10003; 개발자들 4.5기 부원</li>
+                      <li>&#10003; 개발자들 데이터 분석 스터디 멘토</li>
+                    </ul>
+                  </div>
+                  <h2>워다타 개발에서 각자 한 일(수정 예정)</h2>
+                </div>
+              </div>
+              <!-- devloper1 -->
+              <div class="devloper">
+                <div class="dev_img edge">
+                  <img src="img/dev03.jpg" alt="개발자 이은학">
+                  <span class="text">Front-End</span>
+                </div>
+                <div class="dev_intro">
+                  <h1>이은학</h1>
+                  <div class="own">
+                    <ul>
+                      <li>&#10003; IT융합자율학부 18학번</li>
+                      <li>&#10003; 주전공: 소프트웨어공학과 &amp; 부전공: 컴퓨터공학과</li>
+                      <li>&#10003; 개발자들 3,4기 부원</li>
+                      <li>&#10003; 개발자들 4기 회장</li>
+                    </ul>
+                  </div>
+                  <h2>워다타 개발에서 각자 한 일(수정 예정)</h2>
+                </div>
+              </div>
+              <!-- devloper2 -->
+              <div class="devloper">
+                <div class="dev_img edge">
+                  <img src="img/dev02.jpg" alt="개발자 박진수">
+                  <span class="text">Spring</span>
+                </div>
+                <div class="dev_intro">
+                  <h1>박진수</h1>
+                  <div class="own">
+                    <ul>
+                      <li>&#10003; IT융합자율학부 18학번</li>
+                      <li>&#10003; 주전공: 소프트웨어공학과 &amp; 부전공: </li>
+                      <li>&#10003; 멋쟁이 사자처럼 7기 부원</li>
+                    </ul>
+                  </div>
+                  <h2>워다타 개발에서 각자 한 일(수정 예정)</h2>
+                </div>
+              </div>
+              <!-- devloper3 -->
+              <div class="devloper">
+                <div class="dev_img edge">
+                  <img src="img/dev04.jpg" alt="개발자 신해철">
+                  <span class="text">DataBase</span>
+                </div>
+                <div class="dev_intro">
+                  <h1>신해철</h1>
+                  <div class="own">
+                    <ul>
+                      <li>&#10003; IT융합자율학부 18학번</li>
+                      <li>&#10003; 주전공: 소프트웨어공학과 &amp; 부전공: 정보통신공학과</li>
+                      <li>&#10003; 멋쟁이 사자처럼 7기 부원</li>
+                    </ul>
+                  </div>
+                  <h2>워다타 개발에서 각자 한 일(수정 예정)</h2>
+                </div>
+              </div>
+              <!-- devloper4 -->
+              <div class="devloper">
+                <div class="dev_img edge">
+                  <img src="img/dev05.jpg" alt="개발자 박지영">
+                  <span class="text">JavaScript</span>
+                </div>
+                <div class="dev_intro">
+                  <h1>박지영</h1>
+                  <div class="own">
+                    <ul>
+                      <li>&#10003; IT융합자율학부 18학번</li>
+                      <li>&#10003; 복수전공: 소프트웨어공학과 &amp; 컴퓨터공학과</li>
+                      <li>&#10003; 개발자들 4.5기 부원</li>
+                    </ul>
+                  </div>
+                  <h2>워다타 개발에서 각자 한 일(수정 예정)</h2>
+                </div>
+              </div>
+              <!-- devloper5 -->
+              <div class="devloper">
+                <div class="dev_img">
+                  <img src="img/user.png" alt="추가 개발자">
+                </div>
+                <div class="dev_intro">
+                  <p>WHO IS NEXT?</p>
+                </div>
+              </div>
+              <!-- devloper6 -->
+            </div>
+            <!-- dev_cont -->
+          </div>
+        </div>
+    </section>
+    <!-- developer -->
+
+    <section id="video">
+      <div class="container">
+        <div class="row">
+          <div class="video_cont">
+            <div class="cont_title">
+              <h1>소개 영상</h1>
+            </div>
+            <div class="">
+              <video src="wordata.mp4" autoplay controls></video>
+            </div>
+            <p>special thanks to 박한</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- video -->
+
+    <footer id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="footer_info">
+              <ul>
+                <li>
+                  <a href="#">이용약관</a>
+                </li>
+                <li>
+                  <a href="#service">서비스 안내</a>
+                </li>
+                <li>
+                  <a href="#developer">개발자 소개</a>
+                </li>
+                <li>
+                  <a href="faq.html">FAQ</a>
+                </li>
+              </ul>
+              <address class="">
+                <p>Copyright 2020 by WORDATA develpoer Inc. All right reserved</p>
+              </address>
+            </div>
+            <!-- footer_info -->
+          </div>
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- 자바스크립트 라이브러리 -->
+    <script src="js/jquery.min_1.12.4.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <script>
+      function openSlideMenu(){
+        document.getElementById('menu').style.width = '250px';
+        document.getElementById('nav_content').style.marginLeft = '250px';
+      }
+      function closeSlideMenu(){
+        document.getElementById('menu').style.width = '0';
+        document.getElementById('nav_content').style.marginLeft = '0';
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      layout:decorator="fragment/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>faq</title>
+</head>
+<body>
+<th:block layout:fragment="body">
+    <section id="faq">
+        <div class="container">
+            <div class="row">
+                <div class="faq_info">
+                    <div class="fqp_cont">
+                        <div class="">
+                            <h1>자주묻는 질문</h1>
+                        </div>
+                        <div class="accordion">
+                            <input type="radio" name="accordion" id="answer01">
+                            <label for="answer01">Q. -----질문-----</label>
+                            <div><p>질문에 대한 답변이 들어가는 부분</p></div>
+                            <input type="radio" name="accordion" id="answer02">
+                            <label for="answer02">Q. -----질문-----</label>
+                            <div><p>질문에 대한 답변이 들어가는 부분</p></div>
+                            <input type="radio" name="accordion" id="answer03">
+                            <label for="answer03">Q. -----질문-----</label>
+                            <div><p>질문에 대한 답변이 들어가는 부분</p></div>
+                            <input type="radio" name="accordion" id="answer04">
+                            <label for="answer04">Q. -----질문-----</label>
+                            <div><p>질문에 대한 답변이 들어가는 부분</p></div>
+                            <input type="radio" name="accordion" id="answer05">
+                            <label for="answer05">Q. -----질문-----</label>
+                            <div><p>질문에 대한 답변이 들어가는 부분</p></div>
+                        </div>
+                        <!-- accordion -->
+                    </div>
+                    <!-- fqp_cont -->
+                </div>
+                <!-- faq_info -->
+            </div>
+        </div>
+    </section>
+    <!-- faq -->
+</th:block>
+</body>
+</html>
