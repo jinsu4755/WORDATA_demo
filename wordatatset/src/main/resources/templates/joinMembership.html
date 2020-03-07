@@ -7,6 +7,9 @@
 <head>
     <meta charset="UTF-8">
     <title>joinMembership</title>
+    <th:block layout:flagment="pageCustomFonts">
+        <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    </th:block>
 </head>
 <body>
 <th:block layout:fragment="body">
@@ -102,17 +105,16 @@
 <th:block layout:fragment="pageCustomScript">
     <script type="text/javascript">
         // 비밀번호 일치 여부
-        $(function(){
-            $('#pass').keyup(function(){
+        $(function () {
+            $('#pass').keyup(function () {
                 $('#chkNotice').html('');
             });
 
-            $('#passCheck').keyup(function(){
-                if($('#pass').val() != $('#passCheck').val()){
+            $('#passCheck').keyup(function () {
+                if ($('#pass').val() != $('#passCheck').val()) {
                     $('#chkNotice').html('비밀번호 일치하지 않음');
                     $('#chkNotice').attr('color', '#FF3636');
-                }
-                else{
+                } else {
                     $('#chkNotice').html('비밀번호 일치함');
                     $('#chkNotice').attr('color', '#2478FF');
                 }

@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "user")
 @Getter
-@Setter()
+@Setter
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 public class User {
     @Id

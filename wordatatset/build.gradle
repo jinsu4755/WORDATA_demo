@@ -24,20 +24,30 @@ repositories {
 }
 
 dependencies {
+    //tomcat server 만약 안되면 바로 아래꺼 주석 풀어보기
+    //implementation group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.13'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    //thymeleaf
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation('nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect')
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    compileOnly 'org.projectlombok:lombok'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    annotationProcessor 'org.projectlombok:lombok'
-    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
-    compile('org.springframework.boot:spring-boot-starter-test')
-
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework.boot:spring-boot-starter-security'
-    runtimeOnly 'mysql:mysql-connector-java'
-    testImplementation 'org.springframework.security:spring-security-test'
     implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+    //web
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    //lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    //devtool
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    //jpa
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    //MySQL
+    runtimeOnly 'mysql:mysql-connector-java'
+    //spring test junit
+    compile('org.springframework.boot:spring-boot-starter-test')
+    //spring security
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    testImplementation 'org.springframework.security:spring-security-test'
+
 }
 
 test {
