@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="wordata">
+    <meta name="description" content="데이터 분석과 인공지능을 활용한 단어장 자동 생성 서비스 워다타입니다.">
+    <meta name="keywords" content="빅데이터, 데이터 분석, 인공지능, 영어, 영어 단어장, 워다타, wordata">
+    <title>WORDATA 회원가입</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+  </head>
+  <body style="background-color: #F6F6F6;">
+    <div class="login_header">
+      <div class="container">
+        <div class="row">
+          <div class="login_title">
+            <h1>
+              <a href="index.html">WORDATA</a>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- header -->
+
+    <section id="joinMembership">
+      <div class="join_form">
+        <div class="container">
+          <div class="row">
+            <div class="joinBox">
+              <div class="join_row">
+                <h3 class="join_title">
+                  <label for="id">아이디(학번)</label>
+                </h3>
+                <span class="jm_box int_user">
+                  <input type="text" id="id" name="" value="" class="int">
+                </span>
+              </div>
+              <!-- id -->
+              <div class="join_row">
+                <h3 class="join_title">
+                  <label for="pass">비밀번호<label>
+                </h3>
+                <span class="jm_box int_user">
+                  <input type="password" id="pass" name="" value="" class="int">
+                </span>
+              </div>
+              <!-- password -->
+              <div class="join_row">
+                <h3 class="join_title">
+                  <label for="passCheck">비밀번호 확인</label>
+                </h3>
+                <span class="jm_box int_user">
+                  <input type="password" id="passCheck" name="" value="" class="int">
+                </span>
+              </div>
+              <!-- password check -->
+              <div class="pass_match">
+                <font id="chkNotice" size="2"></font>
+              </div>
+              <!-- pass_match -->
+              <div class="join_row">
+                <h3 class="join_title">
+                  <label for="name">이름</label>
+                </h3>
+                <span class="jm_box int_user">
+                  <input type="text" id="name" name="" value="" class="int">
+                </span>
+              </div>
+              <!-- name -->
+              <div class="join_row">
+                <h3 class="join_title">
+                  <label for="major">학부(학과)</label>
+                </h3>
+                <span class="jm_box major_code">
+                <select class="major" id="major" name="">
+                  <option value="" selected>선택안함</option>
+                  <option value="">--------------------</option>
+                  <option value="">인문융합자율학부</option>
+                  <option value="">기독교문화학과</option>
+                  <option value="">영어학과</option>
+                  <option value="">일어일본학과</option>
+                  <option value="">중어중국학과</option>
+                  <option value="">--------------------</option>
+                  <option value="">사회융합자율학부</option>
+                  <option value="">사회복지학과</option>
+                  <option value="">사회학과</option>
+                  <option value="">경제학과</option>
+                  <option value="">정치학과</option>
+                  <option value="">경영학과</option>
+                  <option value="">--------------------</option>
+                  <option value="">미디어컨텐츠융합자율학부</option>
+                  <option value="">디지털컨텐츠학과</option>
+                  <option value="">신문방송학과</option>
+                  <option value="">--------------------</option>
+                  <option value="">IT융합자율학부</option>
+                  <option value="">컴퓨터공학과</option>
+                  <option value="">소프트웨어공학과</option>
+                  <option value="">정보통신공학과</option>
+                  <option value="">글로컬IT학과</option>
+                </select>
+                </span>
+              </div>
+              <!-- major -->
+              <input type="submit" name="" value="회원가입">
+            </div>
+            <!-- joinBox -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- joinMembership -->
+
+    <footer id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="footer_info">
+              <ul>
+                <li>
+                  <a href="service.html">이용약관</a>
+                </li>
+                <li>
+                  <a href="index.html#service">서비스 안내</a>
+                </li>
+                <li>
+                  <a href="index.html#developer">개발자 소개</a>
+                </li>
+                <li>
+                  <a href="faq.html">FAQ</a>
+                </li>
+              </ul>
+              <address class="">
+                <p>Copyright 2020 by WORDATA develpoer Inc. All right reserved</p>
+              </address>
+            </div>
+            <!-- footer_info -->
+          </div>
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <script src="js/jquery.min_1.12.4.js"></script>
+    <script type="text/javascript">
+      // 비밀번호 일치 여부
+      $(function(){
+        $('#pass').keyup(function(){
+          $('#chkNotice').html('');
+        });
+
+        $('#passCheck').keyup(function(){
+          if($('#pass').val() != $('#passCheck').val()){
+            $('#chkNotice').html('비밀번호 일치하지 않음');
+            $('#chkNotice').attr('color', '#FF3636');
+          }
+          else{
+            $('#chkNotice').html('비밀번호 일치함');
+            $('#chkNotice').attr('color', '#2478FF');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

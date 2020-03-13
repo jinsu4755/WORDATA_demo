@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+/* 레이아웃 */
+#header {background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/main.png");
+ height: 100vh; background-size: cover; background-position: center;}
+#header_two {width: 100%; height: 70px; border-bottom: 1px solid #BDBDBD; background-color: white;}
+#login {margin: 0 auto;}
+#joinMembership {margin: 0 auto;}
+#footer {clear: both; padding: 10px 0 15px 0; text-align: center; background-color: #EEEEEE;}
+
+#service {width: 100%; height: 500px; padding: 50px 0;}
+#achievement {width: 100%; height: 420px; padding: 25px 0; background-color: #E4E4E4; font-family: 'Yeon Sung', cursive;}
+#analysis {width: 100%; height: 600px; padding: 40px 0;}
+#developer {width: 100%; height: 800px; padding: 40px 0; background-color: #E4E4E4;}
+#video {width: 100%; height: 560px; padding: 40px 0;}
+
+#faq {width: 100%;}
+#terms {width: 100%;}
+
+#fileUpload {width: 100%; height: 700px;}
+#analysis_start {background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../img/analysis01.jpg");
+  background-size: cover; background-position: center;}
+#analysis_ongoing {background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../img/analysis02.jpg");
+  background-size: cover; background-position: center;}
+#analysis_end {background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../img/analysis03.jpg");
+  background-size: cover; background-position: center;}
+
+/* 가운데 영역 */
+.container {position: relative; width: 1280px; margin: 0 auto;}
+.container_two {position: relative; width: 900px; margin: 0 auto;}
+
+/* 로우 영역 */
+
+/* 헤더 영역 */
+.header_up {width: 100%; height: 100px;}
+.header_up .main {max-width: 1200px; margin: auto;}
+.header_up .main_title h1 {float: left; height: auto; line-height: 100px; font-size: 50px; color: #fff; font-family: 'Luckiest Guy', cursive;}
+.header_up .nav {float: right;}
+.header_up .navnav { height: 100%; width: 0; position: fixed; z-index: 3; top: 0; right: 0;
+  background-color: #D5D5D5; opacity: .9; overflow-x: hidden; padding-top: 60px; transition: 0.7s;}
+.header_up .navnav a { display: block; padding: 15px 30px; font-size: 26px; font-weight: 700;
+  text-decoration: none; color: #353535; height: 35px; font-family: 'Yeon Sung', cursive; }
+.header_up .navnav a:hover { color: #000; transition: 0.4s;}
+.header_up .navnav .menu_info { border-bottom: 1px solid #5D5D5D; padding: 15px 30px;}
+.header_up .navnav .close {position: absolute; top: 0; font-size: 30px}
+.header_up .slide a {color: #fff; font-size: 36px;}
+.header_up .nav #nav_content {padding: 20px; transition: 0.7s; overflow: hidden;}
+.header_dowm {width: 100%;}
+.header_dowm .title {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.header_dowm .title h1 {color: #fff; font-size: 44px; text-align: center; font-family: 'Gaegu', cursive;}
+.header_dowm .button {position: absolute; top: 66%; left: 50%; transform: translate(-50%, -50%);}
+.header_dowm .btn {border: 1px solid #fff; padding: 10px 30px; color: #fff; text-decoration: none; font-size: 20px; transition: 0.6s ease;}
+.header_dowm .btn:hover {background-color: #fff; color: #000;}
+
+/* 추가 헤더 영역 */
+.header h1 {float: left;}
+.header h1 em {padding: 12px 8px 12px 0; display: inline-block;}
+.header h1 em img {width: 200px;}
+.header .nav {float: right;}
+.header .nav ul li {float: left;}
+.header .nav ul li a {display: block; padding: 0 12px; font-size: 20px; font-weight: 700; color: #444; line-height: 70px;}
+
+/* 푸터 영역 */
+.footer_info {padding: 10px 0 5px; width: 80%; margin: 0 auto; font-size: 14px;}
+.footer_info ul {padding: 0 0 5px 0;}
+.footer_info li {position: relative; display: inline; padding-right: 10px; white-space: nowrap;}
+.footer_info li:after {content: ''; position: absolute; right: 5px; top: 5px; width: 1px; height: 11px; background: #8f8f8f;}
+.footer_info li:last-child:after {width: 0; height: 0;}
+.footer_infor address p {color: #8f8f8f; padding-bottom: 15px;}
+
+/* 체크 박스 */
+.checkbox input {display: none;}
+.checkbox .icon {display: inline-block; width: 18px; height: 18px; background-color: transparent; border: 2px solid #8C8C8C; border-radius: 5px; position: relative; cursor: pointer;}
+.checkbox .icon::before, .checkbox .icon::after {content: ''; display: inline-block; width: 3px; height: 0; background-color: #0054FF; position: absolute; transform-origin: left top; border-radius: 5px;}
+.checkbox .icon::before {top: 7px; left: 1px; transform: rotate(-45deg);}
+.checkbox .icon::after {top: 14px; left: 9px; transform: rotate(-135deg);}
+.checkbox input:checked ~ .icon {border-color: #0054FF;}
+.checkbox input:checked ~ .icon::before {height: 10px; transition: all .35s ease;}
+.checkbox input:checked ~ .icon::after {height: 12px; transition: all .35s ease .35s;}
+.checkbox .text {margin-left: 5px; vertical-align: top;}
+
+/* 메인 페이지 */
+/*  서비스 영역 */
+.cont_title {width: 100%; text-align: center;}
+.cont_title h1 {font-size: 28px; font-weight: 700;}
+.cont_title p {font-size: 20px; padding: 15px 0 10px 0;}
+.service_cont {width: 100%; padding: 10px 0;}
+.service_cont p {font-size: 50px; text-align: center;}
+
+.service_chart {height: 370px; text-align: center;}
+.service_chart .chart_cont {display: inline-block; height: 280px; padding: 50px 0;}
+.service_chart > div {overflow: hidden;}
+.service_chart > div > div {float: left; width: 292px; margin-right: 18px;}
+.service_chart > div > div:last-child {margin-right: 0;}
+.service_chart > div > div .poster {position: relative;}
+.service_chart > div > div .poster img {display: block; width: 162px; height: 162px; margin-left: auto; margin-right: auto;}
+.service_chart > div > div .infor {padding: 14px; margin-top: 30px;}
+.service_chart > div > div .infor h3 {color: #333; font-size: 24px; font-weight: 700; margin-bottom: 8px;}
+.service_chart > div > div .infor p {color: #333; font-size: 16px; font-weight: 400; padding: 10px 0;}
+.highright {display: inline-table; position: relative; overflow: hidden;}
+.highright span {position: relative; z-index:2;}
+.highright::before {content: ''; position: absolute; display: block; top: 0; left: -100%; width: 100%; height: 100%; background: rgba(250, 244, 192,.8); transition: all .35s; z-index:1;}
+.cont_info:hover .highright::before {left: 0;}
+
+/* 역사,비전 영역 */
+.wd_title h1 {font-size: 34px; text-align: center; font-weight: 700;}
+.achievement_info {padding: 20px 0 15px 120px; width: 550px; float: left;}
+.achievement_info .word h2 {font-size: 30px; font-weight: 500;}
+.achievement_info .word p {font-size: 26px; margin-top: 10px;}
+.achievement_info .history {margin-top: 20px;}
+.achievement_info .history p {font-size: 26px; margin-top: 5px;}
+.achievement_info .award {margin-top: 20px;}
+.achievement_info .award p {font-size: 26px; padding: 10px 0 0 0;}
+.vision {float: right;  padding: 20px 110px 15px 0; margin-top: 80px;}
+.vision p {font-size: 30px; text-align: center;}
+
+/* 개발자 소개 영역 */
+.dev_cont {padding: 20px 0;}
+.dev_cont .devloper {float: left; width: 50%; padding: 12px 0; display: inline-block;}
+.dev_cont .devloper .dev_img {float: left;}
+.dev_cont .devloper .dev_img img {width: 220px; height: 220px; max-width: 100%;}
+.dev_cont .devloper .dev_intro {float: right; width: 380px; height: 218px; border: 1px solid #969696; background-color: #EEEEEE; margin-right: 20px;}
+.dev_cont .devloper .dev_intro .own {height: 110px; padding: 10px 15px;}
+.dev_cont .devloper .dev_intro h1 {font-size: 23px; font-weight: 700; padding: 10px 15px 0 15px;}
+.dev_cont .devloper .dev_intro ul li {font-size: 15px;}
+.dev_cont .devloper .dev_intro h2 {font-size: 18px; padding: 0 15px;}
+.dev_cont .devloper .dev_intro p {font-size: 32px; text-align: center; line-height: 218px; font-family: 'Yeon Sung', cursive;}
+
+.edge {position: relative; display: inline-block;}
+.edge span.text {position: absolute; top: 50%; left: 0; transform: translateY(-50%); display: none;
+  width: 100%; font-size: 42px; text-align: center; color: #FAF4C0; font-family: 'Yeon Sung', cursive;}
+.edge::before, .edge::after {content: ''; position: absolute; top: 50%; left: 50%;
+width: 90%; height: 90%; transform: translate(-50%, -50%); transition: all .8s;}
+.edge::before {border-top: 2px solid #FAF4C0; border-bottom: 2px solid #FAF4C0; width: 0;}
+.edge::after {border-left: 2px solid #FAF4C0; border-right: 2px solid #FAF4C0; height: 0;}
+.edge:hover span.text {display: block;}
+.edge:hover::before {width: 90%;}
+.edge:hover::after {height: 91%;}
+
+/* 소개영상 영역 */
+.video_cont {text-align: center;}
+.video_cont video {display: inline-block;}
+.video_cont p {font-size: 16px; margin-top: 25px;}
+
+/* 로그인 페이지 */
+.login_header {width: 100%; padding: 40px 0 10px 0;}
+.login_title h1 {text-align: center; font-size: 60px; font-family: 'Luckiest Guy', cursive;}
+.login .lg_box {padding: 30px 0 50px 0;}
+.login .lg_up_box {width: 510px; margin: 0 auto; padding: 0 0 15px 0; border-bottom: 1px solid #CFCFCF;}
+.login .wrapper input {width: 100%; margin-bottom: 25px;}
+.login .wrapper input[type=text], .login .wrapper input[type=password] {
+  border: none; outline: none; border: 1px solid #c8c8c8; background: transparent; height: 50px; font-size: 18px; opacity: 1;
+  color: #000; background-color: #fff;}
+.login .wrapper input[type=submit] {border: none; outline: none; height: 60px; background: #80deea; color: #000; font-size: 20px;}
+.login .wrapper input[type=submit]:hover {cursor: pointer;}
+.login .wrapper a {font-size: 14px; text-decoration: none; color: #000; opacity: 0.8;}
+.login .bottom-text input {width: 10%; float: left; font-size: 16px;}
+.login .bottom-text a {float: right;}
+.login .advertisement {width: 510px; height: 140px; background-color: #d96b6c; margin: 0 auto;
+  margin-top: 40px; font-family: 'Nanum Pen Script', cursive;}
+.login .advertisement a {color: #fff; text-align: center;}
+.login .info_ad {height: 100%; text-align: center;}
+.login .info_ad a p {font-size: 34px;}
+.login .info_ad a span {font-size: 22px;}
+
+/* 회원가입 페이지 */
+label {cursor: default;}
+.joinBox {width: 510px; margin: 0 auto;}
+.join_title {margin: 20px 0 8px; font-size: 18px; font-weight: 500;}
+.jm_box {display: block; position: relative; width: 100%; height: 55px; border: 1px solid #c8c8c8;
+  padding: 10px 14px 10px 14px; box-sizing: border-box; background: #fff; vertical-align: top;}
+.jm_box .int_user {padding-right: 110px;}
+.join_row .int {display: block; position: relative; width: 100%; height: 32px; line-height: 32px;
+  border: none; background: #fff; font-size: 18px; box-sizing: border-box; z-index: 10;}
+.join_row .major_code {display: block; width: 100%;box-sizing: border-box;}
+.join_row .major {width: 100%; height: 32px; font-size: 16px; line-height: 20px; color: #000; border: none;}
+.joinBox input[type=submit] {border: none; outline: none; width: 100%; height: 55px;
+  background: #80deea; color: #000; font-size: 20px; margin: 30px 0 40px; cursor: pointer;}
+.pass_match {width: 100%; height: 20px; padding-top: 6px;}
+.pass_match font {font-size: 16px;}
+
+/* FAQ(자주묻는 질문) 페이지 */
+.faq_info {text-align: center;}
+.fqp_cont {width: 900px; height: 700px; padding: 20px 0; display: inline-block;}
+.fqp_cont h1 {font-size: 28px; font-weight: 500; text-align: left; padding: 20px 0;}
+.fqp_cont .accordion input[id*="answer"] {display: none;}
+.fqp_cont .accordion input[id*="answer"] + label {display: block; padding: 20px 10px; border-bottom: 1px solid #8C8C8C; color: #000;
+  font-size: 16px; font-weight: 500; cursor: pointer; position: relative; text-align: left;}
+.fqp_cont .accordion input[id*="answer"] + label + div {max-height: 0; transition: all .5s; overflow: hidden; background-color: #EAEAEA; font-size: 14px; text-align: left;}
+.fqp_cont .accordion input[id*="answer"] + label + div p {display: inline-block; padding: 20px; text-align: left;}
+.fqp_cont .accordion input[id*="answer"]:checked + label + div {max-height: 100px;}
+
+/* 이용약관 페이지 */
+.terms_info {text-align: center;}
+.terms_cont {width: 900px; padding: 20px 0; display: inline-block;}
+.terms_cont h1 {font-size: 28px; font-weight: 500; text-align: left; padding: 20px 0;}
+.terms_cont p {width: 100%; text-align: left; font-size: 14px; padding: 3px 0;}
+.terms_cont p.chapter {font-size: 22px; padding: 10px 0;}
+.terms_cont p.purpose {font-size: 17px; padding: 5px 0;}
+.terms_cont p.last_cont {padding-bottom: 20px;}
+
+/* 파일 업로드(데이터 분석) 페이지 */
+/* 분석 시작, 완료 */
+.btn_cont {width: 100%; height: 100vh; display: inline-block;}
+.btn_cont .button {display: block; width: 180px; height: 60px; position: relative; border: 3px solid #355400;
+  border-radius: 5px; background-color: #9FC93C; margin: 300px auto;}
+.btn_cont .button .content {display: block; position: absolute; bottom: 10px; width: 100%; height: 100%; line-height: 60px; font-size: 22px; font-weight: 500;
+  text-align: center; background-color: #CEF279; color: #000; box-shadow: 0 6px 0 #9FC93C; border-radius: 5px; transition: all 0.1s linear; }
+.btn_cont .button:active .content { bottom: 0; box-shadow: 0 0 0 #9FC93C;}
+
+/* 분석 진행중 */
+.on_cont {width: 100%; height: 100vh;}
+.on_cont .on_phrase {width: 100%; padding: 120px 0 80px 0;}
+.on_cont .on_phrase h1 {color: #D2D2D2; font-size: 42px; font-family: 'Do Hyeon', sans-serif;
+  animation: type 4s steps(22); overflow: hidden; white-space: nowrap; width: 24ch;}
+@keyframes type {0% {width: 0ch;} 100% {width: 24ch;}}
+.on_cont .wheel {padding: 60px 0 0 180px;}
+.on_cont .wheel .wheel_info {width: 120px; height: 120px; color: #D2D2D2;}
