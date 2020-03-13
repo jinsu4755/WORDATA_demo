@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      layout:decorator="fragment/layout">
+  <head>
+    <!-- metadata -->
+    <meta charset="utf-8">
+    <title>데이터 분석 시작</title>
+  </head>
+  <body>
+
+<th:block layout:fragment="body">
+  <section id="analysis_start">
+  <div class="container">
+    <div class="row">
+      <div class="btn_cont">
+        <a href="#" class="button">
+          <span class="content">분석 시작하기</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- analysis_start -->
+</th:block>
+
+
+  </body>
+</html>
